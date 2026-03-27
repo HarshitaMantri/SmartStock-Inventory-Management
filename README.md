@@ -122,6 +122,7 @@ mongod
 ```
 
 **🔑 Environment Variables (.env)**
+```
 MONGO_URL=mongodb://127.0.0.1:27017
 DB_NAME=smartstock_db
 SECRET_KEY=your_secret_key
@@ -132,8 +133,9 @@ MAIL_SERVER=smtp.gmail.com
 MAIL_PORT=587
 
 OPENAI_API_KEY=your_api_key (optional)
-
+```
  ##🔗 API Endpoints (Sample)
+```
 Endpoint	Description
 /api/auth/login	User login
 /api/auth/register	User signup
@@ -141,30 +143,35 @@ Endpoint	Description
 /api/transactions	Sales/Purchase
 /api/reports	Reports
 /api/assistant/chat	Smart assistant
+```
 
  ##🧠 How It Works
+ ```
 User logs in → JWT authentication
 Frontend sends requests to backend
 Backend processes logic & interacts with MongoDB
 Alerts triggered when stock is low
 Reports & analytics generated dynamically
-
+```
 ##🎯 Use Cases 
+```
 Retail shops
 Warehouses
 Small businesses
 Inventory tracking systems
-
+```
 ##🚀 Future Enhancements
+```
 Mobile app integration
 Advanced analytics (AI predictions)
 Barcode scanning
 Multi-warehouse support
-
+```
 ##👩‍💻 Author
+```
 Harshita Mantri
- Python Backend Developer
-
+Python Backend Developer
+```
 ##⭐ Contribution
 
 Feel free to fork, contribute, and improve the project!
