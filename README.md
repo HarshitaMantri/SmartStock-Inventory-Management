@@ -9,132 +9,166 @@ A comprehensive inventory management system built with a **FastAPI** backend and
 -   **Reporting**: View sales reports and analytics.
 -   **Responsive Design**: Built with React and modern CSS for a seamless user experience.
 
-## 🛠️ Tech Stack
-
-### Backend
--   **Framework**: FastAPI
--   **Language**: Python
--   **Databases**:
-    -   **SQLite**: Used for User Authentication (stored in `users.db`).
-    -   **MongoDB**: Used for Inventory and Product data.
--   **Key Libraries**: `uvicorn`, `pydantic`, `sqlalchemy`, `motor`, `pyjwt`, `passlib`.
-
-### Frontend
--   **Framework**: React
--   **Build Tool**: Vite
--   **Key Libraries**: `axios`, `react-router-dom`, `jwt-decode`.
+It provides a modern UI with powerful backend support and optional AI assistance for better usability.
 
 ---
 
-## 📋 Prerequisites
+## 🛠️ Tech Stack
 
-Before you begin, ensure you have the following installed on your machine:
+### 🔹 Frontend
+- React (Vite)
+- JavaScript
+- CSS
 
-1.  **Node.js** (v14 or higher) & **npm** - [Download Here](https://nodejs.org/)
-2.  **Python** (v3.8 or higher) - [Download Here](https://www.python.org/)
-3.  **MongoDB** - Ensure you have a local MongoDB instance running or a cloud MongoDB Atlas URI. [Download Community Server](https://www.mongodb.com/try/download/community)
+### 🔹 Backend
+- Flask (Python)
+- REST API
+
+### 🔹 Database
+- MongoDB (NoSQL)
+
+### 🔹 Other Tools
+- JWT Authentication
+- SMTP (Email alerts)
+- Optional OpenAI API (Smart Assistant)
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+- User Signup & Login
+- JWT-based authentication
+- Password reset via email
+- Role-based access (Admin/User)
+
+---
+
+### 📦 Inventory Management
+- Add, update, delete products
+- Manage stock levels
+- Categories and suppliers
+- Stock thresholds (min, max, reorder)
+
+---
+
+### 🔄 Transactions
+- Record purchases (stock in)
+- Record sales (stock out)
+- Maintain transaction history
+
+---
+
+### 🚨 Low-Stock Alerts
+- Detect products below threshold
+- Email notifications
+- Admin test email feature
+
+---
+
+### 📊 Reports
+- Generate reports by date/type
+- Export as CSV & PDF
+
+---
+
+### 📈 Sales Analytics
+- Dashboard with charts
+- Sales insights
+
+---
+
+### 🤖 Smart Assistant
+- Chat-based help system
+- Keyword-based + AI responses
+
+---
+
+## 🏗️ Project Structure
+
+
+smartstock/
+│
+├── frontend/ # React frontend
+├── backend/ # Flask backend
+│ ├── routes/ # API routes
+│ ├── utils/ # Email/SMS services
+│ ├── database.py # DB connection
+│ └── main.py # App entry point
+│
+├── .env # Environment variables
+└── README.md
+
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the Repository
-
+### 1️⃣ Clone the Repository
 ```bash
-git clone <repository-url>
-cd Infosys_project
-```
-
-### 2. Backend Setup
-
-Navigate to the backend directory and set up the Python environment.
-
-```bash
+git clone https://github.com/your-username/smartstock.git
+cd smartstock
+2️⃣ Backend Setup
 cd backend
-```
-
-**Create and activate a virtual environment:**
-
-```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# Mac/Linux
-python3 -m venv venv
-source venv/bin/activate
-```
-
-**Install dependencies:**
-
-```bash
 pip install -r requirements.txt
-```
-
-**Environment Variables:**
-Create a `.env` file in the `backend` folder (if not already present) and add your configurations:
-
-```env
-MONGO_URL=mongodb://localhost:27017
-SECRET_KEY=your_super_secret_key
-```
-
-### 3. Frontend Setup
-
-Open a new terminal, navigate to the frontend directory, and install dependencies.
-
-```bash
+cp .env.example .env
+python main.py
+3️⃣ Frontend Setup
 cd frontend
 npm install
-```
-
----
-
-## 🏃‍♂️ Running the Application
-
-You need to run both the backend and frontend servers simultaneously (in separate terminal windows).
-
-### Start the Backend Server
-
-From the `backend` directory (with virtual environment activated):
-
-```bash
-uvicorn main:app --reload
-```
-*The backend API will run at `http://localhost:8000`*
-
-### Start the Frontend Server
-
-From the `frontend` directory:
-
-```bash
 npm run dev
-```
-*The frontend application will run at `http://localhost:5173` (or the port shown in your terminal)*
+4️⃣ Start MongoDB
+mongod
+🔑 Environment Variables (.env)
+MONGO_URL=mongodb://127.0.0.1:27017
+DB_NAME=smartstock_db
+SECRET_KEY=your_secret_key
 
----
+MAIL_USERNAME=your_email
+MAIL_PASSWORD=your_app_password
+MAIL_SERVER=smtp.gmail.com
+MAIL_PORT=587
 
-## 📂 Project Structure
+OPENAI_API_KEY=your_api_key (optional)
+ ## 🔗 API Endpoints (Sample)
+Endpoint	Description
+/api/auth/login	User login
+/api/auth/register	User signup
+/api/products	Product CRUD
+/api/transactions	Sales/Purchase
+/api/reports	Reports
+/api/assistant/chat	Smart assistant
 
-```
-Infosys_project/
-├── backend/             # FastAPI Backend
-│   ├── routes/          # API Routes (auth, products, reports)
-│   ├── main.py          # Application Entry Point
-│   ├── database.py      # MongoDB Connection
-│   ├── sql_models.py    # SQL Models (User)
-│   ├── users.db         # SQLite Database File
-│   └── requirements.txt # Python Dependencies
-│
-├── frontend/            # React Frontend
-│   ├── src/
-│   │   ├── pages/       # Application Pages
-│   │   └── ...
-│   ├── package.json     # JS Dependencies
-│   └── vite.config.js   # Vite Configuration
-│
-└── README.md            # Project Documentation
-```
+🧠 How It Works
+User logs in → JWT authentication
+Frontend sends requests to backend
+Backend processes logic & interacts with MongoDB
+Alerts triggered when stock is low
+Reports & analytics generated dynamically
+
+🎯 Use Cases
+Retail shops
+Warehouses
+Small businesses
+Inventory tracking systems
+🚀 Future Enhancements
+Mobile app integration
+Advanced analytics (AI predictions)
+Barcode scanning
+Multi-warehouse support
+
+👩‍💻 Author
+
+Harshita Mantri
+Final Year Student | Python Backend Developer
+
+⭐ Contribution
+
+Feel free to fork, contribute, and improve the project!
+
+📌 License
+
+This project is for educational purposes.
 
 ## 🤝 Contributing
 
