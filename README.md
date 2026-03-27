@@ -119,7 +119,7 @@ npm install
 npm run dev
 4️⃣ Start MongoDB
 mongod
-
+```
 
 **🔑 Environment Variables (.env)**
 MONGO_URL=mongodb://127.0.0.1:27017
