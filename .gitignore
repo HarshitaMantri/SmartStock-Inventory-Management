@@ -1,0 +1,91 @@
+# =========================
+# 🔐 Environment Variables
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# 🐍 Python (Backend)
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+instance/
+*.db
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# =========================
+# ⚛️ Node / React (Frontend)
+# =========================
+node_modules/
+dist/
+build/
+.cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# 🗄️ MongoDB (IMPORTANT)
+# =========================
+mongodata/
+*.wt
+*.lock
+*.log
+
+# =========================
+# 📦 Zip & Large Files
+# =========================
+*.zip
+*.tar
+*.gz
+*.rar
+
+# =========================
+# 💻 OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🧰 VS Code / IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# 🧪 Testing / Coverage
+# =========================
+coverage/
+*.coverage
+htmlcov/
+
+# =========================
+# 🔑 Secrets & Keys
+# =========================
+*.pem
+*.key
+*.crt
+
+# =========================
+# 🚀 Build Outputs
+# =========================
+*.out
+*.exe
+
+# =========================
+# Misc
+# =========================
+*.bak
+*.tmp
+*.swp
