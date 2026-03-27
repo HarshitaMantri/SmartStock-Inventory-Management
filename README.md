@@ -86,20 +86,20 @@ It provides a modern UI with powerful backend support and optional AI assistance
 
 ## 🏗️ Project Structure
 
-
+```
 smartstock/
 │
-├── frontend/ # React frontend
-├── backend/ # Flask backend
-│ ├── routes/ # API routes
-│ ├── utils/ # Email/SMS services
-│ ├── database.py # DB connection
-│ └── main.py # App entry point
+├── frontend/          # React frontend
 │
-├── .env # Environment variables
+├── backend/           # Flask backend
+│   ├── routes/        # API routes
+│   ├── utils/         # Email/SMS services
+│   ├── database.py    # DB connection
+│   └── main.py        # App entry point
+│
+├── .env               # Environment variables
 └── README.md
-
-
+```
 ---
 
 ## ⚙️ Installation & Setup
