@@ -119,7 +119,9 @@ npm install
 npm run dev
 4️⃣ Start MongoDB
 mongod
-🔑 Environment Variables (.env)
+
+
+**🔑 Environment Variables (.env)**
 MONGO_URL=mongodb://127.0.0.1:27017
 DB_NAME=smartstock_db
 SECRET_KEY=your_secret_key
@@ -130,7 +132,8 @@ MAIL_SERVER=smtp.gmail.com
 MAIL_PORT=587
 
 OPENAI_API_KEY=your_api_key (optional)
- ## 🔗 API Endpoints (Sample)
+
+ ** 🔗 API Endpoints (Sample)**
 Endpoint	Description
 /api/auth/login	User login
 /api/auth/register	User signup
@@ -139,34 +142,34 @@ Endpoint	Description
 /api/reports	Reports
 /api/assistant/chat	Smart assistant
 
-🧠 How It Works
+ ##🧠 How It Works
 User logs in → JWT authentication
 Frontend sends requests to backend
 Backend processes logic & interacts with MongoDB
 Alerts triggered when stock is low
 Reports & analytics generated dynamically
 
-🎯 Use Cases
+**🎯 Use Cases **
 Retail shops
 Warehouses
 Small businesses
 Inventory tracking systems
-🚀 Future Enhancements
+
+**🚀 Future Enhancements**
 Mobile app integration
 Advanced analytics (AI predictions)
 Barcode scanning
 Multi-warehouse support
 
-👩‍💻 Author
-
+**👩‍💻 Author**
 Harshita Mantri
-Final Year Student | Python Backend Developer
+ Python Backend Developer
 
-⭐ Contribution
+**⭐ Contribution**
 
 Feel free to fork, contribute, and improve the project!
 
-📌 License
+ ## 📌 License
 
 This project is for educational purposes.
 
